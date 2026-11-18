@@ -5,11 +5,14 @@ from src.cart_total import calculate_total
 
 @pytest.mark.parametrize(
     ("unit_price", "quantity", "expected"),
-    [
-        (1000, 2, 2000),
-        (0, 3, 0),
-        (1000, 1, 1000),
-    ]
+    
+[
+    (1000, 2, 2000),
+    (0, 3, 0),
+    (1000, 1, 1000),
+    (1000, 0, 1000),  #Minimum charged quantity is one
+]
+
 )
 def test_valid_cart_total(unit_price, quantity, expected):
     # Act

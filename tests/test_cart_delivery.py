@@ -8,9 +8,11 @@ from src.cart_delivery import qualifies_free_delivery
     [
         (0, False),
         (4999, False),
+        (5000, False),  # Exactly 5000 does not qualify
         (5001, True),
     ]
 )
+
 def test_valid_delivery_values(total, expected):
     # Act
     result = qualifies_free_delivery(total)
