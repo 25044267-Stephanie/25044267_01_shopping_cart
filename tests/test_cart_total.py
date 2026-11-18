@@ -1,4 +1,4 @@
-
+# C339 CA1 - Shopping Cart total calculation unit tests
 import pytest
 from src.cart_total import calculate_total
 
