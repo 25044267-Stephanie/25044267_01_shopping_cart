@@ -37,3 +37,4 @@ def test_negative_delivery_total():
 def test_invalid_delivery_data_types(total):
     with pytest.raises(TypeError):
         qualifies_free_delivery(total)
+
